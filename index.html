@@ -41,7 +41,7 @@
 
             <!-- start client -->
             <div id="client" class="w3-center" style="margin: 10px 20px; position: relative;">
-                
+                <!-- search -->
                 <div class="w3-card row" style="padding: 10px 10px;">
                     <div class="w3-half">
                         <h5 style="text-transform:uppercase">FIND AND CONTACT REGISTERED USERS around your location</h5>
@@ -50,6 +50,7 @@
                         <input type="search" name="searcher" id="search" style="width:60%; outline:none ;">
                     </div>
                 </div>
+                <!-- end search -->
                 <h2>OUR CLIENTS</h2>
                 <div class="row w3-border w3-card " style="margin-bottom: 20px; border-radius: 5px; padding: 10px;">                   
                        
@@ -63,7 +64,7 @@
                                     <img src="./images/female.png" alt="" style="border-radius:  50%;" width="200px" height="180px">
                                 </li>
                                 <li class="list-group-item " style="text-transform: uppercase;background-color:transparent;border-top: 1px solid #b7b6b7;">
-                                    <h3>StepheNS JACOB</h3>
+                                    <h3>mary jane</h3>
                                 </li>
                                 <li class="list-group-item" style="text-transform: uppercase;background-color:transparent;">
                                     <h6>ANAMBRA</h6>
@@ -101,7 +102,7 @@
                                     <img src="./images/female.png" alt="" style="border-radius:  50%;" width="200px" height="180px">
                                 </li>
                                 <li class="list-group-item " style="text-transform: uppercase;background-color:transparent;border-top: 1px solid #b7b6b7;">
-                                    <h3>StepheNS JACOB</h3>
+                                    <h3>mary jane</h3>
                                 </li>
                                 <li class="list-group-item" style="text-transform: uppercase;background-color:transparent;">
                                     <h6>ABIA</h6>
@@ -134,8 +135,8 @@
                </div>
               
                 <a  onclick="document.getElementById('id01').style.display='block'" >
-                    <div style="position: absolute; bottom: -20px;right: -30px; padding: 5px 20px; border-radius: 50%; font-size: xx-large" class="w3-blue btn">
-                        +
+                    <div style="position: absolute; bottom: -20px;right: -30px; padding:10px 20px; border-radius: 50%; font-size: xx-large" class="w3-blue btn">
+                       &#10010;
                    </div>
                 </a>
 
@@ -145,26 +146,25 @@
                   <div class="w3-modal-content w3-card w3-animate-zoom w3-topbar w3-border-blue w3-grey" style="max-width: 3600px; width: 500px;">                
                         <div class="w3-center"><br>
                             <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Close Modal">×</span>
+                            <button class="w3-btn w3-display-topleft w3-large d-none" id="goback"><span>&#9666;</span>BACK</button>
 
-                            <p>
-                                <h5 id="account">Select Account</h5>
-                                <div class="w3-half">
-                                    <input class="w3-radio" type="radio" name="Account" value="buyer"  id="buyer">
-                                    <label>BUYER</label>
-                                </div>
-                                <div class="w3-half">
-                                    <input class="w3-radio" type="radio" name="Account" value="seller" id="seller">
-                                    <label>SELLER</label>
-                                </div>
-                                
-                            </p>
+                           <div class="" id="account_select">
+                               <h5>SELECT ACCOUNT</h5>
+                               <button class="btn w3-btn w3-blue" id="buyer_btn" style="margin: 20px;"><h5>BUYER</h5></button>
+                               <button class="btn w3-btn w3-blue" id="supply_btn"style="margin: 20px;"><h5>SUPPLIER</h5></button>
+                           </div>
 
+                           
+                         <div id="image_avatar" class="d-none">
                             <div class="spinner-border w3-text-blue" role="status" id="spinner">
                                 <span class="sr-only"></span>
-                            </div ><br>
-                            <img src="" alt="select gender to assign avatar" style="width:30%" class="w3-circle w3-margin-top" id="avatar">
+                              </div ><br>
+                              <img src="" alt="select gender to assign avatar" style="width:30%" class="w3-circle w3-margin-top" id="avatar">
+                         </div>
+                 
                     
-                            <form class="w3-container" action="">
+                            <form class="w3-container d-none" action="" id="buyer_form">  
+                                <h3 class="w3-blue w3-disabled">BUYER</h3>
                             <div class="w3-section">
                                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
 
@@ -174,6 +174,48 @@
 
                                 <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Confirm Password" name="psw2" required>
 
+                                
+                                <strong>TELL US YOUR LOCATION</strong>
+                                <div class="form-group">
+                                    <label for="my-select">STATE</label>
+                                    <select id="my-select" class="form-control" name=""  required>
+                                        <option>Enugu </option>
+                                        <option>Ebonyi</option>
+                                        <option>Abia</option>
+                                        <option>Imo</option>
+                                        <option>Anambra</option>
+                                    </select>
+                                </div>
+
+                                <p>
+                                    <h5 id="select">select gender</h5>
+                                    <div class="w3-half">
+                                        <input class="w3-radio" type="radio" name="gender" value="male"  id="male">
+                                        <label>Male</label>
+                                    </div>
+                                    <div class="w3-half">
+                                        <input class="w3-radio" type="radio" name="gender" value="female" id="female">
+                                        <label>Female</label>
+                                    </div>
+                                    
+                                </p>
+                                    
+                                
+                                <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit" id="submit">Sign Up</button>                       
+                            </div>
+                            </form>
+                            <form  class="w3-container d-none" action="" id="supply_form">
+                                <h3 class="w3-blue w3-disabled">SUPPLIER</h3>
+                            <div class="w3-section">
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
+
+                                <input class="w3-input w3-border w3-margin-bottom" type="email" placeholder="Enter Email" name="email" required>
+
+                                <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password" name="psw" required>
+
+                                <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Confirm Password" name="psw2" required>
+
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter vehicle id" name="vehicleid" required>
                                 
                                 <strong>TELL US YOUR LOCATION</strong>
                                 <div class="form-group">

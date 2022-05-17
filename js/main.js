@@ -1,7 +1,7 @@
 $(document).ready(function () {
     
 
-const selesct = document.getElementById('select')
+const select = document.getElementById('select')
 let avatar = document.getElementById('avatar')
 const genderBtns = document.querySelectorAll("[name='gender']")
 
@@ -49,6 +49,25 @@ genderBtns.forEach(btn => {
     })
 })
 
+$('#buyer_btn').click(function () {
+    $('#image_avatar').removeClass('d-none')
+    $('#account_select').addClass('d-none')
+    $('#buyer_form').removeClass('d-none')
+    $('#goback').removeClass('d-none')
+})
+$('#supply_btn').click(function () {
+    $('#image_avatar').removeClass('d-none')
+    $('#account_select').addClass('d-none')
+    $('#supply_form').removeClass('d-none')
+    $('#goback').removeClass('d-none')
+})
+
+$('#goback').click(function () {
+    $('#image_avatar').addClass('d-none')
+    $('#supply_form').addClass('d-none')
+    $('#buyer_form').addClass('d-none')
+    $('#account_select').removeClass('d-none')
+})
 
 $('#submit').click(function (submit) {
     if($('input') !==  ''){
