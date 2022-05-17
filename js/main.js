@@ -63,6 +63,7 @@ $('#supply_btn').click(function () {
 })
 
 $('#goback').click(function () {
+    $('#goback').addClass('d-none')
     $('#image_avatar').addClass('d-none')
     $('#supply_form').addClass('d-none')
     $('#buyer_form').addClass('d-none')
