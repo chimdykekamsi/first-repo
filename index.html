@@ -163,8 +163,8 @@
                          </div>
                  
                     
-                            <form class="w3-container d-none" action="database_buyersignup.php" id="buyer_form" method="post">  
-                                <h3 class="w3-blue w3-disabled">BUYER</h3>
+                            <form class="w3-container d-none" action="insert.php" id="buyer_form" method="post">  
+                                <input class="w3-blue w3-disabled w3-input w3-center " read-only value="BUYER">
                             <div class="w3-section">
                                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
 
@@ -178,11 +178,11 @@
                                 <strong>TELL US YOUR LOCATION</strong>
                                 <div class="form-group">
                                     <label for="my-select">STATE</label>
-                                    <select id="my-select" class="form-control" name=""  required>
-                                        <option>Enugu </option>
-                                        <option>Ebonyi</option>
-                                        <option>Abia</option>
-                                        <option>Imo</option>
+                                    <select id="my-select" class="form-control" name="state"  required>
+                                        <option value="enugu">Enugu </option>
+                                        <option value="ebonyi">Ebonyi</option>
+                                        <option value="abia">Abia</option>
+                                        <option value="imo">Imo</option>
                                         <option>Anambra</option>
                                     </select>
                                 </div>
@@ -201,10 +201,10 @@
                                 </p>
                                     
                                 
-                                <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit" id="submit">Sign Up</button>                       
+                                <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit" id="submit" name="submit">Sign Up</button>                       
                             </div>
                             </form>
-                            <form  class="w3-container d-none" action="" id="supply_form">
+                            <!-- <form  class="w3-container d-none" action="" id="supply_form">
                                 <h3 class="w3-blue w3-disabled">SUPPLIER</h3>
                             <div class="w3-section">
                                 <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="username" required>
@@ -245,7 +245,7 @@
                                 
                                 <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit" id="submit">Sign Up</button>                       
                             </div>
-                            </form>
+                            </form> -->
                         </div>              
                   </div>
                 </div>

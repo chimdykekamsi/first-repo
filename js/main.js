@@ -72,7 +72,7 @@ $('#goback').click(function () {
 
 $('#submit').click(function (submit) {
     if($('input') !==  ''){
-        submit.preventDefault()
+        // submit.preventDefault()
     }
 })
 })
