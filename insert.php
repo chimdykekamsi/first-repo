@@ -6,12 +6,13 @@
         $email = $_POST['email'];
         $psw = $_POST['psw'];
         $state = $_POST['state'];
-        $username = $_POST['username'];
+        $user = $_POST['username'];
+       
         
     }
 
 
-$sql =" INSERT INTO `userdetails` ( `gender`, `email`, `password`, `state`, `username`) VALUES ('$gender' , ' $email' , ' $psw' , '$state' , ' $username' )";
+$sql =" INSERT INTO `buyer db` ( `username`, `email`, `password`, `state`, `gender` ) VALUES ('$user' , ' $email' , ' $psw' , '$state' , ' $gender')";
 
 if (mysqli_query($coon, $sql)) {
    echo "sucesfull";

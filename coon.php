@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "solution";
+    $dbname = "real solutions";
 
 
     $coon = mysqli_connect($servername, $username, $password, $dbname);
